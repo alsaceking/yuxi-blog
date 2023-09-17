@@ -1,0 +1,21 @@
+:root {
+  --color-text: rgba(0, 0, 0, 0.8);
+  --color-text-d: rgba(0, 0, 0, 0.5);
+  --color-background: #F2F7FF;
+  --color-theme: #52616B;
+  --color-theme-d: #F0F5F9;
+ 
+
+  --radius-size-medium: 5px;
+  --fontsize-large-x: 26px;
+  --fontsize-large: 18px;
+  --fontsize-medium: 16px;
+  --fontsize-medium-s: 14px;
+  --fontsize-small: 12px;
+  --fontsize-small-s: 10px;
+}
+.dark {
+  --color-text: rgb(229, 229, 229);
+  --color-text-d: rgba(229, 229, 229, 0.6);
+  --color-background: rgb(38, 40, 55);
+}
