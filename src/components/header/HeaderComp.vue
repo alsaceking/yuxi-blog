@@ -3,8 +3,10 @@ import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import CatIcon from '@/assets/icon/CatIcon.vue'
 
-const light = 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z',
-      dark = 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+const light =
+    'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z',
+  dark =
+    'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
 const svgPath = ref(light)
 const themeParam = ref(1)
 
@@ -28,8 +30,8 @@ const router = useRouter()
 watch(
   () => router.currentRoute.value.fullPath,
   (val, oldVal) => {
-    console.log('val: ', val);
-    console.log('oldVal: ', oldVal);
+    console.log('val: ', val)
+    console.log('oldVal: ', oldVal)
   }
 )
 </script>
@@ -41,12 +43,17 @@ watch(
         <CatIcon />
       </a>
       <div class="nav">
-        <a href="/jacob-blog/posts-list" class="nav__item">Posts</a>
-        <a href="/jacob-blog/find" class="nav__item">Find</a>
-        <a href="/jacob-blog/about" class="nav__item">Me</a>
+        <a href="/yuxi-blog/posts-list" class="nav__item">Posts</a>
+        <a href="/yuxi-blog/find" class="nav__item">Find</a>
+        <a href="/yuxi-blog/about" class="nav__item">Me</a>
         <div class="toggle-theme" @click="toggleTheme">
           <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="svgPath"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              :d="svgPath"
+            ></path>
           </svg>
         </div>
       </div>
@@ -85,24 +92,24 @@ nav {
       display: inline-block;
       position: relative;
       margin-left: 30px;
-      transition: all .25s;
+      transition: all 0.25s;
       font-weight: 600;
       font-size: var(--fontsize-large);
       transition: all 0.25s;
       color: var(--color-text);
       &::before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        transition: bottom .25s;
+        transition: bottom 0.25s;
       }
       &:hover {
         transform: translateY(-5px);
-        text-shadow: 3px 2px 3px #B3B3B3;
+        text-shadow: 3px 2px 3px #b3b3b3;
         &::before {
           bottom: -10px;
         }

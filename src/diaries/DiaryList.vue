@@ -59,7 +59,7 @@ onMounted(() => {
         class="moment-item"
       >
         <div class="avatar">
-          <img src="/jacob-blog/kai.jpg" alt="" />
+          <img src="/yuxi-blog/kai.jpg" alt="" />
         </div>
         <div class="content-wrap">
           <div class="name">
