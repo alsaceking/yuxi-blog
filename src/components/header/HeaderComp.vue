@@ -43,9 +43,12 @@ watch(
         <CatIcon />
       </a>
       <div class="nav">
-        <a href="/yuxi-blog/posts-list" class="nav__item">Posts</a>
+        <!-- <a href="/yuxi-blog/posts-list" class="nav__item">Posts</a>
         <a href="/yuxi-blog/find" class="nav__item">Find</a>
-        <a href="/yuxi-blog/about" class="nav__item">Me</a>
+        <a href="/yuxi-blog/about" class="nav__item">Me</a> -->
+        <RouterLink to="/posts-list" class="nav__item">Posts</RouterLink>
+        <RouterLink to="/find" class="nav__item">Find</RouterLink>
+        <RouterLink to="/about" class="nav__item">Me</RouterLink>
         <div class="toggle-theme" @click="toggleTheme">
           <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
             <path

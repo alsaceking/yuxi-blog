@@ -10,7 +10,8 @@ import CatFace from '@/components/catFace/CatFace.vue'
       ✨
       从前那些人的一举一动，一言一行都如此纯真，女孩子的脸红就胜过一大段对白。可后来有了胭脂，便分不清是真情还是假意。
     </p>
-    <a href="/yuxi-blog/posts-list" class="forword-btn">Go Ahead</a>
+    <!-- <a href="/yuxi-blog/posts-list" class="forword-btn">Go Ahead</a> -->
+    <RouterLink to="/posts-list" class="forword-btn">Go Ahead</RouterLink>
     <CatFace></CatFace>
   </div>
 </template>
