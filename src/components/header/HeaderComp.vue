@@ -39,9 +39,12 @@ watch(
 <template>
   <header>
     <nav>
-      <a href="/" class="logo">
+      <!-- <a href="/" class="logo">
         <CatIcon />
-      </a>
+      </a> -->
+      <RouterLink to="/" class="logo">
+        <CatIcon />
+      </RouterLink>
       <div class="nav">
         <!-- <a href="/yuxi-blog/posts-list" class="nav__item">Posts</a>
         <a href="/yuxi-blog/find" class="nav__item">Find</a>

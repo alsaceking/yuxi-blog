@@ -4,6 +4,11 @@ import { getMonthAlias, getDateState } from '@/utils/date.js'
 
 const navList = ref([
   {
+    alias: '贰零贰肆年',
+    date: '2024',
+    dataList: []
+  },
+  {
     alias: '贰零贰叁年',
     date: '2023',
     dataList: []
@@ -35,29 +40,15 @@ onMounted(() => {
     <!-- nav -->
     <nav class="year-nav">
       <ul>
-        <li
-          v-for="(item, index) in navList"
-          :key="index"
-          @click="switchNav(index, item.date)"
-        >
-          <span :class="{ 'year-nav_active': index === currentNavIndex }">{{
-            item.alias
-          }}</span>
+        <li v-for="(item, index) in navList" :key="index" @click="switchNav(index, item.date)">
+          <span :class="{ 'year-nav_active': index === currentNavIndex }">{{ item.alias }}</span>
         </li>
       </ul>
     </nav>
     <!-- moment list -->
-    <section
-      v-for="item in navList[currentNavIndex].dataList"
-      :key="item.month"
-      class="moment-wrap"
-    >
+    <section v-for="item in navList[currentNavIndex].dataList" :key="item.month" class="moment-wrap">
       <h1 class="month-alias">{{ getMonthAlias(item.month) }}</h1>
-      <div
-        v-for="moment in item.diaryList"
-        :key="moment.publishTime"
-        class="moment-item"
-      >
+      <div v-for="moment in item.diaryList" :key="moment.publishTime" class="moment-item">
         <div class="avatar">
           <img src="@/assets/image/kai.jpg" alt="" />
         </div>
@@ -66,7 +57,7 @@ onMounted(() => {
             <span>{{ moment.name }}</span>
             <time>{{ getDateState(moment.publishTime) }}</time>
           </div>
-          <p class="content-text">{{ moment.content }}</p>
+          <p class="content-text" v-html="moment.content"></p>
           <span class="content-tag">{{ moment.supplement }}</span>
         </div>
       </div>

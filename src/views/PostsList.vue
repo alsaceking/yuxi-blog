@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 import HeaderComp from '@/components/header/HeaderComp.vue'
 import { postsList } from '@/posts/postsObj.js'
 
+console.log(postsList)
 const router = useRouter()
 
 const goDetails = (post) => {
@@ -16,14 +17,9 @@ const goDetails = (post) => {
   <HeaderComp></HeaderComp>
   <div class="posts-list">
     <h1 class="tips">Posts</h1>
-    <article
-      v-for="post in postsList"
-      class="article"
-      :key="post.alias"
-      @click="goDetails(post)"
-    >
-      <a class="post-head">{{post.title}}</a>
-      <time class="post-date">{{post.releaseDate}}</time>
+    <article v-for="post in postsList" class="article" :key="post.alias" @click="goDetails(post)">
+      <a class="post-head">{{ post.title }}</a>
+      <time class="post-date">{{ post.releaseDate }}</time>
     </article>
   </div>
 </template>
@@ -51,12 +47,12 @@ const goDetails = (post) => {
       font-weight: 500;
       font-size: 20px;
       cursor: pointer;
-      transition: all .3s;
+      transition: all 0.3s;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
     .post-date {

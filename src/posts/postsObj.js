@@ -5,7 +5,7 @@ export const postsList = [
     category: 'technology',
     tag: '技能分享',
     alias: 'git-sharing',
-    title: 'Git 非常酷的文件版本控制工具',
+    title: 'Git',
     releaseDate: '2018-05-06'
   },
   {

@@ -17,6 +17,7 @@ npm install
 ```
 
 ### Compile and Hot-Reload for Development
+    https://alsaceking.github.io/yuxi-blog/
 
 ```sh
 npm run dev
