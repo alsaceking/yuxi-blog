@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/post/:tag/:alias',
       name: 'post',
       component: () => import('../views/PostView.vue')
+    },
+    {
+      path: '/dairy-add',
+      name: 'dairy-add',
+      component: () => import('../views/DairyAdd.vue')
     }
   ]
 })

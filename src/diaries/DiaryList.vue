@@ -4,6 +4,11 @@ import { getMonthAlias, getDateState } from '@/utils/date.js'
 
 const navList = ref([
   {
+    alias: '贰零贰伍年',
+    date: '2025',
+    dataList: []
+  },
+  {
     alias: '贰零贰肆年',
     date: '2024',
     dataList: []
